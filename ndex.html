@@ -3,36 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tủ Sách Dịch Văn Học</title>
+  <title>Ngọn Lửa Giữa Đêm Đông - Phủi Bụi Lãng Quên</title>
   <style>
+    /* Nền toàn trang web */
     body {
-      background-color: #2C1D11;
+      background-color: #2C1D11; /* Màu nâu gỗ trầm */
       margin: 0;
-      padding: 20px;
+      padding: 20px 10px;
       font-family: Georgia, 'Times New Roman', serif;
     }
+
+    /* Khung bài viết dạng trang sách */
     .book-container {
-      max-width: 900px;
+      max-width: 850px;
       margin: 0 auto;
-      background-color: #FAF5E8;
+      background-color: #FAF5E8; /* Vàng kem ngả cổ điển */
       color: #2B2B2B;
-      padding: 35px 30px;
+      padding: 30px 25px;
       border: 1px solid #D6C2A5;
       border-radius: 4px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
       line-height: 1.85;
       font-size: 18px;
       text-align: justify;
+      box-sizing: border-box;
+    }
+
+    /* Ảnh Banner tự động khít 100% bề ngang khung */
+    .Tieude 110-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 25px;
+      border-radius: 2px;
+    }
+
+    /* Tiêu đề tác phẩm */
+    h1 {
+      text-align: center;
+      color: #800020; /* Màu đỏ rượu vang */
+      font-size: 26px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 10px 0 6px 0;
+    }
+
+    /* Dòng tác giả và dịch giả */
+    .meta-info {
+      text-align: center;
+      color: #6E5343;
+      font-size: 15px;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    /* Hoa văn phân cách */
+    .divider {
+      text-align: center;
+      color: #800020;
+      margin: 20px 0;
+      font-size: 16px;
+    }
+
+    /* Thụt đầu dòng đoạn văn */
+    p {
+      text-indent: 25px;
+      margin-bottom: 16px;
+      margin-top: 0;
+    }
+
+    /* Khối lời bình của người dịch */
+    .translator-note {
+      background-color: #F2EADB;
+      border-left: 4px solid #800020;
+      padding: 18px 20px;
+      margin-top: 35px;
+      border-radius: 2px;
+    }
+    .translator-note-title {
+      font-weight: bold;
+      font-size: 16px;
+      color: #800020;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      text-indent: 0;
+    }
+    .translator-note-content {
+      font-style: italic;
+      font-size: 16px;
+      color: #4A3B32;
+      line-height: 1.7;
+      text-indent: 0;
+      margin: 0;
     }
   </style>
 </head>
 <body>
 
   <div class="book-container">
-    <h1 style="text-align: center; color: #800020; text-transform: uppercase;">NGỌN LỬA GIỮA ĐÊM ĐÔNG</h1>
-    <p style="text-align: center; font-style: italic; color: #6E5343;">Tác giả: Jack London • Bản dịch của Phủi Bụi Lãng Quên</p>
-    <div style="text-align: center; color: #800020; margin: 20px 0;">❖ ❖ ❖</div>
-    
-    <p style="text-indent: 25px;">Nội dung bản dịch của bạn bắt đầu tại đây...</p>
+
+    <!-- 1. ẢNH BANNER TỰ ĐỘNG CO GIÃN VỪA KHÍT BỀ NGANG -->
+    <img src="banner.png" alt="Banner Tiêu Đề" class="banner-img">
+
+    <!-- 2. TIÊU ĐỀ TÁC PHẨM -->
+    <h1>TÊN TÁC PHẨM Ở ĐÂY</h1>
+    <div class="meta-info">Tác giả: Jack London • Bản dịch của Phủi Bụi Lãng Quên</div>
+
+    <!-- 3. PHÂN CÁCH -->
+    <div class="divider">❖ ❖ ❖</div>
+
+    <!-- 4. THÂN BÀI DỊCH -->
+    <p>Dán đoạn văn dịch đầu tiên của bạn vào đây. Từng câu chữ sẽ được tự động lùi đầu dòng và căn đều hai bên mép một cách chỉn chu...</p>
+    <p>Đoạn văn tiếp theo tiếp tục nối dài tại đây...</p>
+    <p>Đoạn kết thúc câu chuyện...</p>
+
+    <div class="divider">--- HẾT ---</div>
+
+    <!-- 5. KHỐI LỜI BÌNH CỦA NGƯỜI DỊCH -->
+    <div class="translator-note">
+      <div class="translator-note-title">Lời bình của người dịch</div>
+      <div class="translator-note-content">
+        Ghi lại những cảm nhận, bối cảnh lịch sử của tác phẩm, phân tích tâm lý nhân vật hoặc những chia sẻ riêng về quá trình chuyển ngữ vào khu vực này...
+      </div>
+    </div>
+
   </div>
 
 </body>
