@@ -3,162 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Phủi Bụi Lãng Quên - Tác Phẩm Dịch</title>
-  
-  <!-- Nhúng font Merriweather chuẩn tiếng Việt không bị lỗi dấu -->
+  <title>Mục Lục Tác Phẩm - Phủi Bụi Lãng Quên</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* 1. Thiết lập chung */
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
-      background-color: #2C1D11; /* Màu nền gỗ nâu trầm */
+      background-color: #2C1D11;
       margin: 0;
       padding: 24px 12px;
-      font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+      font-family: 'Merriweather', Georgia, serif;
       color: #2B2B2B;
       display: flex;
       justify-content: center;
     }
-
-    /* 2. Khung trang sách Responsive (tự co giãn theo màn hình) */
     .book-container {
       width: 100%;
-      max-width: 850px; /* Tối đa 850px trên máy tính */
-      background-color: #FAF5E8; /* Màu giấy vàng kem cổ điển */
+      max-width: 850px;
+      background-color: #FAF5E8;
       padding: 35px 30px;
       border: 1px solid #D6C2A5;
       border-radius: 4px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
-      line-height: 1.85;
-      font-size: 18px;
-      text-align: justify;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.35);
     }
+    .banner-img { width: 100%; height: auto; display: block; margin-bottom: 25px; border-radius: 2px; }
+    h1 { text-align: center; color: #800020; font-size: 26px; text-transform: uppercase; margin-bottom: 5px; }
+    .subtitle { text-align: center; font-style: italic; color: #6E5343; margin-bottom: 25px; font-size: 15px; }
+    .divider { text-align: center; color: #800020; margin: 20px 0; }
 
-    /* 3. Banner co giãn tự động theo bề ngang */
-    .banner-img {
-      width: 100%;
-      height: auto;
+    /* Danh sách mục lục */
+    .table-of-contents {
+      list-style: none;
+      padding: 0;
+      margin: 25px 0;
+    }
+    .table-of-contents li {
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed #D6C2A5;
+    }
+    .table-of-contents a {
+      text-decoration: none;
+      color: #800020;
+      font-size: 19px;
+      font-weight: 700;
       display: block;
-      margin-bottom: 25px;
-      border-radius: 2px;
     }
-
-    /* 4. Tiêu đề tác phẩm */
-    h1 {
-      text-align: center;
-      color: #800020; /* Đỏ rượu vang */
-      font-size: 26px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin: 10px 0 6px 0;
+    .table-of-contents a:hover {
+      color: #b31b3b;
     }
-
-    /* 5. Thông tin tác giả/dịch giả */
-    .meta-info {
-      text-align: center;
+    .post-desc {
+      font-size: 14.5px;
       color: #6E5343;
-      font-size: 15px;
-      font-style: italic;
-      margin-bottom: 20px;
-    }
-
-    /* 6. Hoa văn phân cách */
-    .divider {
-      text-align: center;
-      color: #800020;
-      margin: 22px 0;
-      font-size: 16px;
-      user-select: none;
-    }
-
-    /* 7. Đoạn văn dịch (tự động thụt đầu dòng) */
-    p {
-      text-indent: 25px;
-      margin-top: 0;
-      margin-bottom: 16px;
-    }
-
-    /* 8. Khối Lời bình của người dịch */
-    .translator-note {
-      background-color: #F2EADB;
-      border-left: 4px solid #800020;
-      padding: 20px 22px;
-      margin-top: 35px;
-      border-radius: 2px;
-    }
-
-    .translator-note-title {
-      font-weight: 700;
-      font-size: 16px;
-      color: #800020;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-      text-indent: 0;
-    }
-
-    .translator-note-content {
-      font-style: italic;
-      font-size: 16px;
-      color: #4A3B32;
-      line-height: 1.7;
-      text-indent: 0;
-      margin: 0;
-    }
-
-    /* 9. TỐI ƯU CHO ĐIỆN THOẠI (Mobile & Tablet dọc) */
-    @media (max-width: 600px) {
-      body {
-        padding: 10px 6px; /* Giảm viền ngoài */
-      }
-      .book-container {
-        padding: 20px 14px; /* Tăng diện tích đọc trên điện thoại */
-        font-size: 16.5px;   /* Cỡ chữ vừa mắt màn hình nhỏ */
-        line-height: 1.75;
-      }
-      h1 {
-        font-size: 21px;    /* Thu nhỏ tiêu đề tránh tràn dòng */
-      }
-      p {
-        text-indent: 18px;  /* Giảm nhẹ khoảng thụt lề */
-      }
+      margin-top: 4px;
     }
   </style>
 </head>
 <body>
 
   <main class="book-container">
+    <img src="Tiêu de110.png" alt="Banner" class="banner-img" onerror="this.onerror=null; this.src='Tiêu de110.jpg';">
 
-    <!-- BANNER KHỚP TÊN FILE TIÊU DE110 -->
-    <img src="Tiêu de110.png" alt="Phủi Bụi Lãng Quên Banner" class="banner-img" onerror="this.onerror=null; this.src='Tiêu de110.jpg';">
-
-    <!-- TIÊU ĐỀ TÁC PHẨM -->
-    <h1>TÊN TÁC PHẨM Ở ĐÂY</h1>
-    <div class="meta-info">Tác giả: Jack London • Bản dịch của Phủi Bụi Lãng Quên</div>
-
+    <h1>MỤC LỤC TÁC PHẨM DỊCH</h1>
+    <div class="subtitle">Những thiên truyện văn chương ngủ quên</div>
     <div class="divider">❖ ❖ ❖</div>
 
-    <!-- NỘI DUNG BẢN DỊCH (Mỗi đoạn bọc trong <p>...</p>) -->
-    <p>Tại doanh trại, một người đàn ông đang bị xét xử về tội danh giết người. Đó là một ông già, thổ dân da đỏ ở mạn dưới Lake Le Barge nơi con sông Whitefish đổ vào dòng sông lớn Yukon. Sự kiện này làm sôi sục cả vùng Dawson, và suốt hàng ngàn dặm từ thượng lưu đến hạ lưu...</p>
+    <!-- DANH SÁCH BÀI VIẾT TẠI ĐÂY -->
+    <ul class="table-of-contents">
+      <li>
+        <a href="bai-1.html">1. Tên tác phẩm dịch thứ nhất</a>
+        <div class="post-desc">Tác giả: Jack London • Một thiên truyện về sự sinh tồn nơi hoang dã.</div>
+      </li>
 
-    <p>Đoạn văn tiếp theo nối tiếp tại đây...</p>
-
-    <div class="divider">--- HẾT ---</div>
-
-    <!-- LỜI BÌNH NGƯỜI DỊCH -->
-    <section class="translator-note">
-      <div class="translator-note-title">Lời bình của người dịch</div>
-      <div class="translator-note-content">
-        Ghi lại cảm nhận, bối cảnh lịch sử hoặc phân tích tác phẩm tại đây...
-      </div>
-    </section>
-
+      <li>
+        <a href="bai-2.html">2. Tên tác phẩm dịch thứ hai</a>
+        <div class="post-desc">Tác giả: O. Henry • Câu chuyện về lòng nhân ái giữa mùa đông.</div>
+      </li>
+      
+      <!-- Sau này có bài 3, bài 4 bạn chỉ cần thêm thẻ <li> tương tự vào đây -->
+    </ul>
   </main>
 
 </body>
