@@ -3,20 +3,34 @@ layout: default
 title: "Mục Lục Tác Phẩm"
 ---
 
-<h1>MỤC LỤC TÁC PHẨM DỊCH</h1>
-<div class="meta-info">Những tuyệt tác văn chương ngủ quên</div>
-<div class="divider">❖ ❖ ❖</div>
+<div class="book-content">
 
-<ul class="table-of-contents">
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <div class="post-desc">
-        Tác giả: {{ post.author | default: "Khuyết danh" }} • Ngày đăng: {{ post.date | date: "%d/%m/%Y" }}
-        {% if post.description %}<br>{{ post.description }}{% endif %}
-      </div>
-    </li>
-  {% else %}
-    <li>Chưa có bài viết nào trong mục lục.</li>
-  {% endfor %}
-</ul>
+  <div style="text-align: center; margin-bottom: 30px;">
+    <p style="font-style: italic; color: #6e5343; font-size: 16px; margin-bottom: 10px;">
+      Kho tàng những câu chuyện và bản dịch chọn lọc
+    </p>
+    <div style="color: #8b4513; font-size: 14px;">❖ ❖ ❖</div>
+  </div>
+
+  <!-- VÒNG LẶP JEKYLL TỰ ĐỘNG LẤY TẤT CẢ BÀI VIẾT TRONG _POSTS -->
+  <ul style="list-style: none; padding: 0; margin: 0;">
+    {% for post in site.posts %}
+      <li style="margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px dashed #ded8c7;">
+        
+        <!-- Tiêu đề bài viết kèm liên kết -->
+        <a href="{{ post.url | relative_url }}" style="text-decoration: none; color: #1a1a1a; font-size: 20px; font-weight: 700; display: block; margin-bottom: 6px;">
+          {{ post.title }}
+        </a>
+
+        <!-- Thông tin tác giả và ngày đăng -->
+        <div style="font-family: 'Open Sans', sans-serif; font-size: 14px; color: #777265; font-style: italic;">
+          {% if post.author %}Tác giả: {{ post.author }}{% endif %}
+          {% if post.translator %} • Bản dịch: {{ post.translator }}{% endif %}
+          <span> • {{ post.date | date: "%d/%m/%Y" }}</span>
+        </div>
+
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
