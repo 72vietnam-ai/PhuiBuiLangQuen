@@ -5,17 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title | default: site.title }}</title>
 
-  <!-- Nạp phông chữ Merriweather chuẩn sách in tiếng Việt -->
+  <!-- Nạp font Roboto Slab chuẩn nét từ Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,400&family=Roboto+Slab:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <style>
-    /* 1. NỀN NGOÀI TOÀN TRANG (Mặt bàn xám kem trầm) */
+    /* 1. NỀN TOÀN TRANG (Mặt bàn xám kem trầm) */
     body {
       background-color: #ede8dc;
-      color: #222222;
-      font-family: 'Merriweather', 'Georgia', serif;
+      color: #2b2b2b;
       margin: 0;
       padding: 40px 20px;
       display: flex;
@@ -25,12 +24,12 @@
       box-sizing: border-box;
     }
 
-    /* 2. TỜ GIẤY TRANG SÁCH NỔI TRÊN BÀN (max-width: 1100px) */
+    /* 2. TỜ GIẤY TRANG SÁCH (Rộng tối đa 1100px) */
     .page-sheet {
-      background-color: #faf6eb; /* Màu giấy sách ngả kem dịu mắt */
-      max-width: 1100px;         /* Đã nâng lên độ rộng 1100px theo yêu cầu */
+      background-color: #faf6eb; /* Màu giấy kem dịu mắt */
+      max-width: 1100px;
       width: 100%;
-      padding: 60px 70px;        /* Độ dày đệm viền trong trang giấy */
+      padding: 60px 70px;
       box-sizing: border-box;
       border-radius: 4px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
@@ -49,6 +48,7 @@
 
     /* 4. TIÊU ĐỀ BÀI VIẾT */
     .story-title {
+      font-family: 'Roboto Slab', serif;
       font-size: 2.2rem;
       font-weight: 700;
       color: #1a1a1a;
@@ -59,19 +59,28 @@
     }
 
     .story-meta {
-      font-size: 1.05rem;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 15px;
       font-style: italic;
-      color: #666666;
+      color: #6e5343;
       text-align: center;
-      margin-bottom: 45px;
-      border-bottom: 1px solid #e2dcce;
-      padding-bottom: 25px;
+      margin-bottom: 25px;
     }
 
-    /* 5. NỘI DUNG VĂN BẢN (Chuẩn sách in) */
+    .story-divider {
+      color: #8b4513;
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 35px;
+      border-bottom: 1px solid #e2dcce;
+      padding-bottom: 20px;
+    }
+
+    /* 5. NỘI DUNG VĂN BẢN (Chuẩn Roboto Slab 18px) */
     .book-content {
-      font-size: 1.2rem;
-      color: #222222;
+      font-family: 'Roboto Slab', serif;
+      font-size: 18px;
+      color: #2b2b2b;
     }
 
     .book-content p {
@@ -79,10 +88,10 @@
       text-align: justify;
       margin-top: 0;
       margin-bottom: 1.6em;
-      text-indent: 0; /* Giữ thẳng lề trái không thụt đầu dòng */
+      text-indent: 0;
     }
 
-    /* 6. KHUNG CHÈN ẢNH MINH HỌA TRONG BÀI */
+    /* 6. HÌNH ẢNH MINH HỌA */
     .story-image-wrap {
       margin: 40px 0;
       text-align: center;
@@ -96,79 +105,73 @@
     }
 
     .image-caption {
-      font-size: 0.95rem;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
       font-style: italic;
-      color: #555555;
+      color: #666666;
       margin-top: 10px;
     }
 
-    /* 7. KHUNG LỜI BÌNH CỦA DỊCH GIẢ */
-    .translator-note {
-      margin-top: 50px;
-      padding: 25px 35px;
-      background-color: #f3edd9;
-      border-left: 4px solid #8b7355;
-      border-radius: 2px;
-      font-size: 1.05rem;
-      line-height: 1.75;
+    /* 7. ĐIỀU HƯỚNG CUỐI BÀI */
+    .story-end {
+      text-align: center;
+      margin: 45px 0 20px;
+      font-family: 'Open Sans', sans-serif;
+      color: #777265;
     }
 
-    .translator-note-title {
-      font-weight: 700;
-      margin-bottom: 10px;
-      color: #4a3b2c;
+    .back-home {
+      display: inline-block;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 15px;
+      color: #8b4513;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .back-home:hover {
+      text-decoration: underline;
     }
 
     /* 8. CHÂN TRANG */
     .site-footer {
       margin-top: 35px;
+      font-family: 'Open Sans', sans-serif;
       font-size: 0.95rem;
       color: #777265;
       text-align: center;
     }
 
-    /* Tương thích khi thu nhỏ cửa sổ hoặc xem trên điện thoại */
     @media (max-width: 768px) {
-      body {
-        padding: 15px 8px;
-      }
-      .page-sheet {
-        padding: 30px 20px;
-      }
-      .book-content {
-        font-size: 1.1rem;
-      }
-      .story-title {
-        font-size: 1.7rem;
-      }
+      body { padding: 15px 8px; }
+      .page-sheet { padding: 30px 20px; }
+      .book-content { font-size: 16px; }
+      .story-title { font-size: 1.7rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Khung giấy trang sách mở rộng tối đa 1100px -->
   <article class="page-sheet">
-    
-    <!-- Banner tự động ẩn nếu không tìm thấy file ảnh -->
     <header>
       <img src="{{ '/Tiêu de110.png' | relative_url }}" alt="Banner Tiêu đề" class="site-banner" onerror="this.style.display='none'">
       {% if page.title %}
         <h1 class="story-title">{{ page.title }}</h1>
       {% endif %}
-      {% if page.author or page.date %}
+      {% if page.author or page.translator %}
         <div class="story-meta">
           {% if page.author %}Tác giả: {{ page.author }}{% endif %}
+          {% if page.translator %} • Bản dịch: {{ page.translator }}{% endif %}
           {% if page.date %} • {{ page.date | date: "%d/%m/%Y" }}{% endif %}
         </div>
       {% endif %}
+      <div class="story-divider">❖ ❖ ❖</div>
     </header>
 
-    <!-- Jekyll tự động truyền nội dung từ file .md vào đây -->
     {{ content }}
 
   </article>
 
-  <!-- Chân trang -->
   <footer class="site-footer">
     <p>© Blog Phủi Bụi Lãng Quên</p>
   </footer>
