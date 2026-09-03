@@ -3,7 +3,7 @@ layout: default
 title: "To Build a Fire"
 author: "Jack London"
 translator: "Phủi Bụi Lãng Quên"
-date: 2026-09-04
+date: 2026-09-03
 ---
 
 <div class="book-content">
