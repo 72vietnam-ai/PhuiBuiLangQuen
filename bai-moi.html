@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- ĐỔI TIÊU ĐỀ TAB TRÌNH DUYỆT TẠI ĐÂY -->
+  <title>Tên Bài Viết Mới - Phủi Bụi Lãng Quên</title>
+  
+  <!-- Font Merriweather chuẩn tiếng Việt -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #2C1D11;
+      margin: 0;
+      padding: 24px 12px;
+      font-family: 'Merriweather', Georgia, serif;
+      color: #2B2B2B;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Khung sách tối đa 1000px */
+    .book-container {
+      width: 100%;
+      max-width: 1000px;
+      background-color: #FAF5E8;
+      padding: 40px 45px;
+      border: 1px solid #D6C2A5;
+      border-radius: 4px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+      line-height: 1.85;
+      font-size: 18px;
+      text-align: justify;
+    }
+
+    /* Banner tự co giãn */
+    .banner-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 25px;
+      border-radius: 2px;
+    }
+
+    /* Tiêu đề truyện */
+    h1 {
+      text-align: center;
+      color: #800020;
+      font-size: 28px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 10px 0 6px 0;
+    }
+
+    /* Thông tin tác giả / dịch giả */
+    .meta-info {
+      text-align: center;
+      color: #6E5343;
+      font-size: 15px;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    /* Hoa văn trang trí */
+    .divider {
+      text-align: center;
+      color: #800020;
+      margin: 22px 0;
+      font-size: 16px;
+      user-select: none;
+    }
+
+    /* Đoạn văn bản dịch */
+    p {
+      text-indent: 25px;
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    /* Thanh điều hướng chuyển bài */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin: 30px 0 20px 0;
+      padding-top: 15px;
+      border-top: 1px dashed #D6C2A5;
+      font-size: 16px;
+    }
+
+    .nav-buttons a {
+      color: #800020;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-buttons a:hover {
+      text-decoration: underline;
+    }
+
+    /* Khung lời bình người dịch */
+    .translator-note {
+      background-color: #F2EADB;
+      border-left: 4px solid #800020;
+      padding: 20px 22px;
+      margin-top: 25px;
+      border-radius: 2px;
+    }
+
+    .translator-note-title {
+      font-weight: 700;
+      font-size: 16px;
+      color: #800020;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      text-indent: 0;
+    }
+
+    .translator-note-content {
+      font-style: italic;
+      font-size: 16px;
+      color: #4A3B32;
+      line-height: 1.7;
+      text-indent: 0;
+      margin: 0;
+    }
+
+    /* Tối ưu màn hình điện thoại */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px 6px;
+      }
+      .book-container {
+        padding: 20px 14px;
+        font-size: 16.5px;
+        line-height: 1.75;
+      }
+      h1 {
+        font-size: 22px;
+      }
+      p {
+        text-indent: 18px;
+      }
+      .nav-buttons {
+        font-size: 14.5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="book-container">
+
+    <!-- 1. ẢNH BANNER -->
+    <img src="Tiêu de110.png" alt="Banner" class="banner-img" onerror="this.onerror=null; this.src='Tiêu de110.jpg';">
+
+    <!-- 2. TIÊU ĐỀ BÀI DỊCH MỚI -->
+    <h1>TÊN TÁC PHẨM MỚI Ở ĐÂY</h1>
+    <div class="meta-info">Tác giả: Tên Tác Giả • Bản dịch của Phủi Bụi Lãng Quên</div>
+
+    <div class="divider">❖ ❖ ❖</div>
+
+    <!-- 3. NỘI DUNG BẢN DỊCH (Mỗi đoạn bọc trong cặp thẻ <p>...</p>) -->
+    <p>Đoạn mở đầu bản dịch mới...</p>
+
+    <p>Đoạn văn tiếp theo...</p>
+
+    <p>Đoạn kết thúc câu chuyện...</p>
+
+    <div class="divider">--- HẾT ---</div>
+
+    <!-- 4. THANH CHUYỂN BÀI (Chỉnh link bài trước / bài sau theo ý muốn) -->
+    <div class="nav-buttons">
+      <a href="bai-1.html">← Bài trước</a>
+      <a href="index.html">Mục Lục</a>
+      <a href="bai-3.html">Bài tiếp theo →</a>
+    </div>
+
+    <!-- 5. LỜI BÌNH CỦA BẠN -->
+    <section class="translator-note">
+      <div class="translator-note-title">Lời bình của người dịch</div>
+      <div class="translator-note-content">
+        Nhập nội dung chia sẻ, bối cảnh lịch sử hoặc phân tích tác phẩm tại đây...
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
