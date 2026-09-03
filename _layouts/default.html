@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} - Phủi Bụi Lãng Quên</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+    
+    body {
+      background-color: #1A120B; /* Nền tối cổ điển làm nổi bật trang giấy */
+      margin: 0;
+      padding: 30px 14px;
+      font-family: 'Merriweather', Georgia, serif;
+      color: #1F1A17; /* Chữ nâu đen tương phản cao, chống mỏi mắt */
+      display: flex;
+      justify-content: center;
+    }
+
+    .book-container {
+      width: 100%;
+      max-width: 1100px;
+      background-color: #FDFBF7; /* Màu giấy ngà cao cấp */
+      padding: 48px 52px;
+      border: 1px solid #D9C8B4;
+      border-radius: 6px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+      line-height: 1.9;
+      font-size: 18.5px;
+      text-align: justify;
+    }
+
+    .banner-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 30px;
+      border-radius: 4px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #7A1717; /* Đỏ đô sang trọng */
+      font-size: 30px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 15px 0 8px 0;
+    }
+
+    .meta-info {
+      text-align: center;
+      color: #5C4A3E;
+      font-size: 15.5px;
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+
+    .divider {
+      text-align: center;
+      color: #7A1717;
+      margin: 28px 0;
+      font-size: 17px;
+      user-select: none;
+    }
+
+    /* Định dạng bài viết */
+    .book-content p {
+      text-indent: 30px;
+      margin-top: 0;
+      margin-bottom: 18px;
+    }
+
+    /* Hình ảnh chèn trong bài */
+    .story-image-wrap {
+      text-align: center;
+      margin: 32px 0;
+    }
+
+    .story-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+      border: 1px solid #E2D5C5;
+    }
+
+    .image-caption {
+      font-size: 14.5px;
+      color: #6B5B52;
+      font-style: italic;
+      margin-top: 8px;
+    }
+
+    /* Mục lục tự động */
+    .table-of-contents {
+      list-style: none;
+      padding: 0;
+      margin: 30px 0;
+    }
+
+    .table-of-contents li {
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px dashed #D9C8B4;
+    }
+
+    .table-of-contents a {
+      text-decoration: none;
+      color: #7A1717;
+      font-size: 20px;
+      font-weight: 700;
+      display: inline-block;
+      transition: color 0.2s ease;
+    }
+
+    .table-of-contents a:hover {
+      color: #A32222;
+    }
+
+    .post-desc {
+      font-size: 15px;
+      color: #5C4A3E;
+      margin-top: 5px;
+    }
+
+    /* Thanh điều hướng */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin: 35px 0 20px 0;
+      padding-top: 18px;
+      border-top: 1px dashed #D9C8B4;
+      font-size: 16px;
+    }
+
+    .nav-buttons a {
+      color: #7A1717;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-buttons a:hover {
+      text-decoration: underline;
+    }
+
+    /* Khung lời bình người dịch */
+    .translator-note {
+      background-color: #F4ECE1;
+      border-left: 5px solid #7A1717;
+      padding: 22px 24px;
+      margin-top: 30px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .translator-note-title {
+      font-weight: 700;
+      font-size: 16px;
+      color: #7A1717;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .translator-note-content {
+      font-style: italic;
+      font-size: 16.5px;
+      color: #382A21;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    /* Tối ưu màn hình nhỏ */
+    @media (max-width: 768px) {
+      body { padding: 12px 6px; }
+      .book-container {
+        padding: 24px 18px;
+        font-size: 17px;
+        line-height: 1.8;
+      }
+      h1 { font-size: 23px; }
+      .book-content p { text-indent: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="book-container">
+    <a href="{{ '/' | relative_url }}">
+      <img src="{{ '/Tiêu de110.png' | relative_url }}" alt="Banner" class="banner-img" onerror="this.onerror=null; this.src='{{ '/Tiêu de110.jpg' | relative_url }}';">
+    </a>
+
+    {{ content }}
+  </main>
+
+</body>
+</html>
