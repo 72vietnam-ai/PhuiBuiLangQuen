@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Đêm Trắng Trên Sông"
+title: "The League of the Old Men"
 author: "Jack London"
 description: "Thiên truyện về cuộc đời của những người đào vàng phương Bắc."
 ---
