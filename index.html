@@ -1,89 +1,22 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mục Lục Tác Phẩm - Phủi Bụi Lãng Quên</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      background-color: #2C1D11;
-      margin: 0;
-      padding: 24px 12px;
-      font-family: 'Merriweather', Georgia, serif;
-      color: #2B2B2B;
-      display: flex;
-      justify-content: center;
-    }
-    .book-container {
-      width: 100%;
-      max-width: 1100px;
-      background-color: #FAF5E8;
-      padding: 35px 30px;
-      border: 1px solid #D6C2A5;
-      border-radius: 4px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.35);
-    }
-    .banner-img { width: 100%; height: auto; display: block; margin-bottom: 25px; border-radius: 2px; }
-    h1 { text-align: center; color: #800020; font-size: 26px; text-transform: uppercase; margin-bottom: 5px; }
-    .subtitle { text-align: center; font-style: italic; color: #6E5343; margin-bottom: 25px; font-size: 15px; }
-    .divider { text-align: center; color: #800020; margin: 20px 0; }
+---
+layout: default
+title: "Mục Lục Tác Phẩm"
+---
 
-    /* Danh sách mục lục */
-    .table-of-contents {
-      list-style: none;
-      padding: 0;
-      margin: 25px 0;
-    }
-    .table-of-contents li {
-      margin-bottom: 18px;
-      padding-bottom: 12px;
-      border-bottom: 1px dashed #D6C2A5;
-    }
-    .table-of-contents a {
-      text-decoration: none;
-      color: #800020;
-      font-size: 19px;
-      font-weight: 700;
-      display: block;
-    }
-    .table-of-contents a:hover {
-      color: #b31b3b;
-    }
-    .post-desc {
-      font-size: 14.5px;
-      color: #6E5343;
-      margin-top: 4px;
-    }
-  </style>
-</head>
-<body>
+<h1>MỤC LỤC TÁC PHẨM DỊCH</h1>
+<div class="meta-info">Những tuyệt tác văn chương ngủ quên</div>
+<div class="divider">❖ ❖ ❖</div>
 
-  <main class="book-container">
-    <img src="Tiêu de110.png" alt="Banner" class="banner-img" onerror="this.onerror=null; this.src='Tiêu de110.jpg';">
-
-    <h1>MỤC LỤC TÁC PHẨM DỊCH</h1>
-    <div class="subtitle">Những thiên truyện văn chương ngủ quên</div>
-    <div class="divider">❖ ❖ ❖</div>
-
-    <!-- DANH SÁCH BÀI VIẾT TẠI ĐÂY -->
-    <ul class="table-of-contents">
-      <li>
-        <a href="bai-1.html">1. Tên tác phẩm dịch thứ nhất</a>
-        <div class="post-desc">Tác giả: Jack London • Một thiên truyện về sự sinh tồn nơi hoang dã.</div>
-      </li>
-
-      <li>
-        <a href="bai-2.html">2. Tên tác phẩm dịch thứ hai</a>
-        <div class="post-desc">Tác giả: O. Henry • Câu chuyện về lòng nhân ái giữa mùa đông.</div>
-      </li>
-      
-      <!-- Sau này có bài 3, bài 4 bạn chỉ cần thêm thẻ <li> tương tự vào đây -->
-    </ul>
-  </main>
-
-</body>
-</html>
+<ul class="table-of-contents">
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <div class="post-desc">
+        Tác giả: {{ post.author | default: "Khuyết danh" }} • Ngày đăng: {{ post.date | date: "%d/%m/%Y" }}
+        {% if post.description %}<br>{{ post.description }}{% endif %}
+      </div>
+    </li>
+  {% else %}
+    <li>Chưa có bài viết nào trong mục lục.</li>
+  {% endfor %}
+</ul>
