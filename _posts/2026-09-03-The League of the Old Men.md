@@ -11,7 +11,7 @@ description: "Thiên truyện về cuộc đời của những người đào v�
 
 <div class="book-content">
 
-Đêm mùa đông trên sông Yukon lạnh buốt giá. Cơn gió thổi rít qua những tán thông phủ đầy tuyết trắng, mang theo hơi thở của vùng hoang dã mênh mông không một bóng người.
+Tại doanh trại, một người đàn ông đang bị xét xử về tội danh giết người. Đó là một ông già, thổ dân da đỏ  ở mạn dưới Lake Le Barge nơi con sông Whitefish đổ vào dòng sông lớn Yukon. Sự kiện này làm sôi sục cả vùng Dawson, và suốt hàng ngàn dặm từ thượng lưu đến hạ lưu sông Yukon cũng vậy. Tập quán của người Anglo-Saxon, - kẻ cướp đất cướp biển- là dùng luật áp đặt lên dân bản địa, và lẽ thường luật này rất khắc nghiệt. Nhưng trong trường hợp của ông Imber, luật lần này lại tỏ ra khiếm khuyết và bất lực. Xét về phương diện toán học thì hình phạt dành cho ông không thể hiện sự công bằng. Bản án đã được ấn định, chắc chắn, sẽ là án tử hình, Imber chỉ có một mạng sống, trong khi chống lại ông là hàng chục mạng người. 
 
 <!-- CHÈN HÌNH ẢNH TRONG BÀI -->
 <div class="story-image-wrap">
